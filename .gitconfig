@@ -1,0 +1,42 @@
+[user]
+	name = Michel Eissa
+	email = michel-eissa@uiowa.edu
+
+[diff]
+	tool = bc3
+	compactionHeuristic = true
+[difftool "bc3"]
+	path = c:/Program Files (x86)/Beyond Compare 3/bcomp.exe
+[push]
+	default = current
+[difftool]
+	prompt = false
+[merge]
+    tool = beyondcompare3
+[mergetool]
+    prompt = false
+[mergetool "beyondcompare3"]
+    trustExitCode = true
+    cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' $LOCAL $REMOTE $BASE -o $MERGED 
+
+#[mergetool "sourcetree"]
+#	cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+#	trustExitCode = true
+
+[alias]
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+le = log --oneline --decorate
+	co = checkout
+subup = submodule update --recursive
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %Cred(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+
+[core]
+	autocrlf = true
+	excludesfile = 
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true

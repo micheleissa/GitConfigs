@@ -1,0 +1,12 @@
+/.project
+/log/
+/wwwroot/unittests/
+/data/
+/wwwroot/log/
+/tmp/
+ugit
+.vscode
+.vs
+*.csproj.DotSettings
+/Scripts/a*
+/Scripts/temp.sql
